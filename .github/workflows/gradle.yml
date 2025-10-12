@@ -20,4 +20,5 @@ jobs:
         java-version: 21
         distribution: 'zulu'
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew publish -PmsdnicrosoftUsername=${{ secrets.MAVEN_USERNAME }} -PmsdnicrosoftPassword=${{ secrets.MAVEN_PASSWORD }}
+
